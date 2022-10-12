@@ -15,7 +15,7 @@ async function checkHeader(req,res,next) {
         res.sendStatus(500)
     }
 
-    
+    res.locals.params = req.params
     res.locals.body = req.body
 
     next()
